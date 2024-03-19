@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.table {
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+/* Add border table tr th td tags on time */
+table,
+tr,
+th,
+td {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+
+}
+/* Table head add paddign and bg color */
+.table th{
+    padding: 15px;
+    background-color: #7480ff;
+    white-space: nowrap;
+    color: black;
+}
+/* Table data add paddign */
+.table td{
+    padding: 15px;
+}
+.table tr{
+  transition: .3s all;
+}
+/* use shortcut add bg all odd table row */
+.table tr:nth-child(odd) td{
+    background: #7480ff5b;
+}
+.table tr:hover{
+        background-color: #7480ff;
+}
+.table tr td:first-child{
+    font-weight: bold;
+    font-size: 18px;
+}

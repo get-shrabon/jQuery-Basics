@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction JQuery</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.3/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+
+  <body class="container mx-auto">
+    <div
+      class="hero min-h-screen"
+      style="
+        background-image: url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg);
+      "
+    >
+      <div class="hero-overlay bg-opacity-60"></div>
+      <div class="hero-content text-center text-neutral-content">
+        <div class="max-w-md">
+          <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
+          <p class="mb-5">
+            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
+            a id nisi.
+          </p>
+          <button id="banner_btn" class="btn btn-primary">Hide Banner</button>
+        </div>
+      </div>
+    </div>
+    <div class="p-10 border top__content">
+      <h3 class="mt-3 text-xl text-white w-[fit-content] oneClick mx-auto">
+        If you click on me, I will disappear.
+      </h3>
+      <h3 class="mt-3 text-xl text-white w-[fit-content] doubleClick mx-auto">
+        If you double click on me, I will disappear.
+      </h3>
+      <h3 class="mt-3 text-xl text-white w-[fit-content] mouseEnter mx-auto">
+        If you mouse enter on me, I will disappear.
+      </h3>
+      <h3 class="mt-3 text-xl text-white w-[fit-content] mouseLeave mx-auto">
+        If you mouse leave on me, I will disappear.
+      </h3>
+      <h3 class="mt-3 text-xl text-white p-2 on text-center">
+        Click or move the mouse pointer over this paragraph.
+      </h3>
+    </div>
+    <div class="p-10">
+      <button class="btn btn-sm btn-accent hide__btn">hide</button>
+      <button class="btn btn-sm btn-accent show__btn">show</button>
+      <button class="btn btn-sm btn-accent toggle__btn">toggole</button>
+      <button class="btn btn-sm btn-accent fadeout__btn">fade out</button>
+      <button class="btn btn-sm btn-accent fadein__btn">fade in</button>
+      <button class="btn btn-sm btn-accent animate__btn">
+        start animation
+      </button>
+      <div class="flex justify-between gap-10 my-5">
+        <div id="box-1" class="w-full h-[250px] bg-error"></div>
+        <div id="box-2" class="w-full h-[250px] bg-success"></div>
+        <div id="box-3" class="w-full h-[250px] bg-warning"></div>
+        <div id="box-4" class="w-full h-[250px] bg-pink-700"></div>
+        <div id="box-5" class="w-full h-[250px] bg-red-900"></div>
+      </div>
+    </div>
+    <!-- Animate -->
+    <div
+      class="animate p-2 w-[150px] h-[120px] bg-error text-white mb-5 flex items-center justify-center"
+    >
+      JQuery
+    </div>
+
+    <!--  JQuery Chaining  -->
+    <div class="p-20">
+      <button class="chaining btn btn-accent btn-sm">start chaining</button>
+      <div class="chain w-[100px] h-[100px] bg-warning mt-5"></div>
+    </div>
+
+    <!-- Create accordiun with jquery Slide -->
+
+    <div class="border bg-slate-800 text-white mb-3 w-[60%]">
+      <h3 class="qus__1 p-3 text-xl font-bold cursor-pointer">What is HTML?</h3>
+      <div class="content__1 hidden border-t p-3">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ex
+          illo id quas officiis quo. Porro doloremque perferendis voluptatum
+          nobis.
+        </p>
+      </div>
+    </div>
+    <div class="border bg-slate-800 text-white mb-3 w-[60%]">
+      <h3 class="qus__2 p-3 text-xl font-bold cursor-pointer">What is CSS?</h3>
+      <div class="content__2 hidden border-t p-3">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ex
+          illo id quas officiis quo. Porro doloremque perferendis voluptatum
+          nobis.
+        </p>
+      </div>
+    </div>
+    <div class="border bg-slate-800 text-white mb-3 w-[60%]">
+      <h3 class="qus__3 p-3 text-xl font-bold cursor-pointer">
+        What is Javascript?
+      </h3>
+      <div class="content__3 hidden border-t p-3">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ex
+          illo id quas officiis quo. Porro doloremque perferendis voluptatum
+          nobis.
+        </p>
+      </div>
+    </div>
+    <!-- DOM Manupulate -->
+    <p>
+      Name:
+      <input
+        class="border p-3 text-white"
+        type="text"
+        id="value"
+        value="User name"
+      />
+    </p>
+    <p class="text py-3 text-white text-lg">
+      This is some <b>bold</b> text in a paragraph.
+    </p>
+    <button class="value__btn btn btn-primary my-5">show value</button>
+    <button class="text__btn btn btn-primary my-5">show text</button>
+    <button class="html__btn btn btn-primary my-5">show html</button>
+    <p class="textset py-3 text-white text-lg">Default Content 1</p>
+    <p class="html py-3 text-white text-lg">Default Content 2</p>
+    <p class="py-3 text-white text-lg">
+      Name:
+      <input class="p-2" id="setValue" value="Default value" type="text" />
+    </p>
+    <button class="value__set btn btn-primary my-5">Set value</button>
+    <button class="text__set btn btn-primary my-5">Set text</button>
+    <button class="html__set btn btn-primary my-5">Set html</button>
+
+    <p class="test_ text-xl text-white">
+      This is <b class="font-bold">Bold</b> Paragraph
+    </p>
+    <button class="btn btn-sm btn-accent set_btn">Show old/new text</button>
+
+    <!-- Filter Search Function -->
+    <div class="p-10">
+      <h2 class="text-4xl font-bold text-accent">Filterable Table</h2>
+      <input
+        id="inputField"
+        class="p-3 border border-accent bg-transparent my-3 w-full outline-0 text-white"
+        type="text"
+        placeholder="Search Your Fav Movie"
+      />
+      <table id="table" class="table">
+        <!-- Table head data here -->
+        <thead>
+          <tr>
+            <th>Film Title</th>
+            <th>Released Year</th>
+            <th>Studio</th>
+            <th>Worldwide Gross</th>
+            <th>Domestic Gross</th>
+            <th>Foreign Gross</th>
+            <th>Budget</th>
+          </tr>
+        </thead>
+        <!-- Table all Data here -->
+        <tbody>
+          <tr>
+            <td>Frozen II</td>
+            <td>2019</td>
+            <td>Walt Disney Animation Studios</td>
+            <td>$1,450,026,933</td>
+            <td>$477,373,578</td>
+            <td>$972,653,355</td>
+            <td>Not disclosed</td>
+          </tr>
+          <tr>
+            <td>Frozen</td>
+            <td>2013</td>
+            <td>Walt Disney Animation Studios</td>
+            <td>$1,280,802,282</td>
+            <td>$400,953,009</td>
+            <td>$879,849,273</td>
+            <td>$150 million</td>
+          </tr>
+          <tr>
+            <td>Incredibles 2</td>
+            <td>2018</td>
+            <td>Pixar Animation Studios</td>
+            <td>$1,243,802,282</td>
+            <td>$608,581,744</td>
+            <td>$635,220,538</td>
+            <td>$200 million</td>
+          </tr>
+          <tr>
+            <td>Minions</td>
+            <td>2015</td>
+            <td>Illumination Entertainment</td>
+            <td>$1,159,398,397</td>
+            <td>$336,045,770</td>
+            <td>$823,352,627</td>
+            <td>$74 million</td>
+          </tr>
+          <tr>
+            <td>Toy Story 4</td>
+            <td>2019</td>
+            <td>Pixar Animation Studios</td>
+            <td>$1,073,394,593</td>
+            <td>$434,038,008</td>
+            <td>$639,356,585</td>
+            <td>$200 million</td>
+          </tr>
+          <tr>
+            <td>Toy Story 3</td>
+            <td>2010</td>
+            <td>Pixar Animation Studios</td>
+            <td>$1,066,969,703</td>
+            <td>$415,004,880</td>
+            <td>$651,964,823</td>
+            <td>$200 million</td>
+          </tr>
+          <tr>
+            <td>Despicable Me 3</td>
+            <td>2017</td>
+            <td>Illumination Entertainment</td>
+            <td>$1,034,799,409</td>
+            <td>$264,624,300</td>
+            <td>$770,175,109</td>
+            <td>$80 million</td>
+          </tr>
+          <tr>
+            <td>Finding Dory</td>
+            <td>2016</td>
+            <td>Pixar Animation Studios</td>
+            <td>$1,028,570,889</td>
+            <td>$486,295,561</td>
+            <td>$542,275,328</td>
+            <td>$200 million</td>
+          </tr>
+          <tr>
+            <td>Zootopia</td>
+            <td>2016</td>
+            <td>Walt Disney Animation Studios</td>
+            <td>$1,023,784,195</td>
+            <td>$341,268,248</td>
+            <td>$682,515,947</td>
+            <td>$150 million</td>
+          </tr>
+          <tr>
+            <td>The Lion King</td>
+            <td>2019</td>
+            <td>Walt Disney Pictures</td>
+            <td>$1,063,611,812</td>
+            <td>$543,638,043</td>
+            <td>$520,973,769</td>
+            <td>$250 million</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="p-10">
+      <p class="text-white text-2xl mb-3">
+        Type something in the input field to search the list for items:
+      </p>
+      <input
+        id="get__item"
+        class="border border-accent w-1/2 bg-transparent text-white p-3"
+        type="text"
+        placeholder="Type here..."
+      />
+
+      <ol class="list-decimal rich__peoples list-inside text-white text-2xl space-y-3 pt-5">
+        <li>Elon Musk</li>
+        <li>Jeff Bezos</li>
+        <li>Bernard Arnault & family</li>
+        <li>Bill Gates</li>
+        <li>Mark Zuckerberg</li>
+        <li>Warren Buffett</li>
+        <li>Larry Ellison</li>
+        <li>Larry Page</li>
+        <li>Sergey Brin</li>
+        <li>Mukesh Ambani</li>
+      </ol>
+    </div>
+    <script src="custom.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </body>
+</html>
