@@ -17,7 +17,7 @@ td {
   border-collapse: collapse;
 
 }
-/* Table head add paddign and bg color */
+/* Table head add padding and bg color */
 .table th{
     padding: 15px;
     background-color: #7480ff;
